@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Owner</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -25,8 +25,8 @@
             $count = mysqli_num_rows($res);
             ?>
             <div class="container-fluid">
-            <h2>Add Admin</h2>
-            <a href="<?php echo ADMIN_PATH.'signup.php'; ?>" class="btn btn-warning">Add Admin</a>
+            <h2>Add Owner</h2>
+            <a href="<?php echo ADMIN_PATH.'signup.php'; ?>" class="btn btn-warning">Add Owner</a>
             <table>
                     <tr>
                         <th>First Name</th>
