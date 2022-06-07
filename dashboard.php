@@ -114,7 +114,7 @@
                   </ul>
             </div> 
             <div class="right-content px-5">
-                <h6 class="font-weight-bold" style="color:#ff4757; margin-bottom: 20px;">CURRENT APARTMENT</h6>
+                <h6 class="font-weight-bold" style="color:#ff4757; margin-bottom: 20px;">CURRENT FLAT</h6>
                 <?php
                   $sql_2 = "SELECT * FROM flat WHERE tenant_id = $tenant_id" ;
                   $res_2 = mysqli_query($conn, $sql_2);

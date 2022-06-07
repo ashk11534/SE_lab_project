@@ -7,6 +7,26 @@
     $_SESSION['name'] = $_GET['name'];
   } 
 ?>
+<?php
+    if(isset($_SESSION['message-success'])){
+        ?>
+            <p class="text-center font-weight-bold vanish" style="color: #2ed573; background: #333; padding: 2px; margin-top:10px; width: 19.5%; margin-left: auto; margin-right: auto; border-radius: 4px;"><?php echo $_SESSION['message-success']; ?></p>
+        <?php
+        unset($_SESSION['message-success']);
+    }
+    if(isset($_SESSION['message-failed'])){
+      ?>
+          <p class="text-center font-weight-bold vanish" style="color: white; background: red; padding: 2px; margin-top:10px; width: 19.5%; margin-left: auto; margin-right: auto; border-radius: 4px;"><?php echo $_SESSION['message-failed']; ?></p>
+      <?php
+      unset($_SESSION['message-failed']);
+  }
+?>
+<script>
+    const p = document.querySelector('.vanish');
+    setTimeout(() => {
+        p.parentNode.removeChild(p);
+    }, 3000);
+</script>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -178,7 +198,7 @@
       <div class="overlay">
         <h1>Get In Touch</h1>
         <hr />
-        <form action="" method="POST">
+        <form action="message.php" method="POST">
           <div class="div-1">
             <input type="text" name="first_name" placeholder="First name" />
             <input type="text" name="last_name" placeholder="Last name" />
